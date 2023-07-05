@@ -38,4 +38,16 @@ return require('packer').startup(function(use)
   
   -- gitsigns
   use {'~/.config/nvim/plugin_sources/gitsigns.nvim-main', alias = 'gitsigns'}
+
+  -- fugitive 
+  use {'~/.config/nvim/plugin_sources/vim-fugitive-master', alias = 'fugitive'}
+
+  -- treesitter
+  use {'~/.config/nvim/plugin_sources/nvim-treesitter-master', alias = 'treesitter'}
+
+  -- treesitter
+  use {'~/.config/nvim/plugin_sources/vim-easy-align-master', alias = 'vim-easy-align'}
+
+  -- tabline
+  use {'~/.config/nvim/plugin_sources/tabline.nvim-main', alias = 'tabline'}
 end)
