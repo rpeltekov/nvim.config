@@ -30,6 +30,16 @@ vim.api.nvim_set_keymap('n', '<leader>sc', "<cmd>Commits<CR>", { noremap = true,
 vim.api.nvim_set_keymap('n', '<leader>sC', "<cmd>BCommits<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>sq', "<cmd>Commands<CR>", { noremap = true, silent = true })
 
+-- moving remaps
+vim.api.nvim_set_keymap('n', '<leader>bh', "<C-W>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bj', "<C-W>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bk', "<C-W>k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bl', "<C-W>l", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bH', "<C-W>H", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bJ', "<C-W>J", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bK', "<C-W>K", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bL', "<C-W>L", { noremap = true, silent = true })
+
 -- gitsigns 
 require('gitsigns').setup {
   signs = {
@@ -183,7 +193,7 @@ vim.opt.fileformat="unix"
 vim.o.hlsearch = true
 
 --Make line numbers default
-vim.wo.number = true
+vim.wo.relativenumber = true
 
 --Enable mouse mode
 vim.o.mouse = 'a'
@@ -218,5 +228,6 @@ vim.o.backup = false
 vim.o.swapfile = false
 
 -- good clipboard
-vim.g.clipboard = {name = "TMUX OSC-52", copy = {["*"] = {"tmux", "load-buffer", "-w", "-"}, ["+"] = {"tmux", "load-buffer", "-w", "-"}}, paste = {["*"] = {"tmux", "save-buffer", "-"}, ["+"] = {"tmux", "save-buffer", "-"}}}
+-- vim.g.clipboard = {name = "TMUX OSC-52", copy = {["*"] = {"tmux", "load-buffer", "-w", "-"}, ["+"] = {"tmux", "load-buffer", "-w", "-"}}, paste = {["*"] = {"tmux", "save-buffer", "-"}, ["+"] = {"tmux", "save-buffer", "-"}}}
+vim.g.clipboard = unnamedplus;
 
